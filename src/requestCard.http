@@ -1,0 +1,53 @@
+GET http://localhost:8080/api/v1/cards
+
+POST http://localhost:8080/api/v1/cards
+Authorization: bearer 
+Content-Type: application/json
+{
+"title":"Test Card",
+"subtitle":"the card number 1",
+"description":"walla walla walla",
+"phone":"054-8339879",
+"email":"card1@gmail.com",
+"address":{
+  "street": "123 Main St",
+    "city": "Anytown",
+    "country": "Israel",
+    "houseNumber": 20,
+    "zip": "12345"
+}
+}
+
+GET http://localhost:8080/api/v1/cards/myCards
+Authorization: bearer 
+Content-Type: application/json
+
+GET http://localhost:8080/api/v1/cards/cardId
+
+PUT http://localhost:8080/api/v1/cards/cardId
+Authorization: bearer 
+Content-Type: application/json
+
+{
+"title":"Test2",
+"subtitle":"the card number 1",
+"description":"walla walla walla",
+"phone":"054-8339879",
+"email":"card1@gmail.com",
+"address":{
+  "street": "123 Main St",
+    "city": "Anytown",
+    "country": "Israel",
+    "houseNumber": 10,
+    "zip": "12345"
+}
+}
+
+PATCH http://localhost:8080/api/v1/cards/cardId 
+Authorization: bearer 
+
+
+
+DELETE http://localhost:8080/api/v1/cards/cardId
+Authorization: bearer 
+Content-Type: application/json
